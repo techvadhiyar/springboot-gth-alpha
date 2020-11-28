@@ -1,0 +1,10 @@
+So this is a STS | Git Hub | Travis CI | JAR file deployment to Docker Hub
+
+https://dzone.com/articles/spring-boot-heroku-and-cicd  ---------- nice article !
+(He uses the Heroku Maven Plugin to deploy from Tavis CI to Heroku)
+
+https://devcenter.heroku.com/articles/deploying-java-applications-with-the-heroku-maven-plugin
+https://devcenter.heroku.com/articles/procfile
+
+
+
