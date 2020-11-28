@@ -7,4 +7,11 @@ https://devcenter.heroku.com/articles/deploying-java-applications-with-the-herok
 https://devcenter.heroku.com/articles/procfile
 
 
+So Travis CI compiles but gives this message - 
+The requested profile "heroku" could not be activated because it does not exist.
 
+Let's see...found this article...
+https://stackoverflow.com/questions/34562249/build-spring-boot-jar-with-a-specific-profile-using-maven
+
+Looks like I forgot to create a Procfile for Heroku...lets do that.
+Instructions - https://devcenter.heroku.com/articles/procfile
