@@ -11,10 +11,8 @@ script: ./mvnw clean install
 
 deploy:  
   provider: heroku
-  skip_cleanup: true
   api_key: $HEROKU_API_KEY
   app: springboot-gth-alpha
-  zip_file: 'target/springboot-gth-alpha-0.0.1-SNAPSHOT.jar' 
   on: 
     branch: main    
 

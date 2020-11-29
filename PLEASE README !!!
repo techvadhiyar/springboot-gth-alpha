@@ -18,3 +18,8 @@ Instructions - https://devcenter.heroku.com/articles/procfile
 https://devcenter.heroku.com/articles/deploying-spring-boot-apps-to-heroku
 https://devcenter.heroku.com/articles/java-support#default-web-process-type
 
+Changed approach...following this article
+https://medium.com/@felippepuhle/getting-started-with-spring-boot-travis-and-heroku-4562a723fd0e
+
+Now the app is successfully deployed but not running...checking...
+https://stackoverflow.com/questions/60085140/deploying-spring-boot-application-to-heroku-error-message-no-web-processes-ru
