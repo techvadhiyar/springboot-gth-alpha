@@ -7,18 +7,14 @@ jdk:
 before_install:
   - chmod +x mvnw
   
-before_script:
-  - curl https://cli-assets.heroku.com/install.sh | sh
-  
 script: ./mvnw clean install
 
 deploy:  
-  provider: script
+  provider: heroku
   skip_cleanup: true
-  script:
-    heroku deploy:jar -j target/springboot-gth-alpha-0.0.1-SNAPSHOT.jar - i ./Procfile --app
+  api_key: $HEROKU_API_KEY
+  app: springboot-gth-alpha
+  zip_file: 'target/springboot-gth-alpha-0.0.1-SNAPSHOT.jar' 
   on: 
-    branch: main
-
-    
+    branch: main    
 
