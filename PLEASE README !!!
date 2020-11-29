@@ -21,8 +21,23 @@ https://devcenter.heroku.com/articles/java-support#default-web-process-type
 Changed approach...following this article
 https://medium.com/@felippepuhle/getting-started-with-spring-boot-travis-and-heroku-4562a723fd0e
 
-Now the app is successfully deployed but not running...checking...
+Now the app is successfully deployed but not running...no dynos running....checking...
 https://stackoverflow.com/questions/60085140/deploying-spring-boot-application-to-heroku-error-message-no-web-processes-ru
 https://github.com/heroku/heroku-deploy/issues/38
 https://github.com/heroku/heroku-cli-deploy
+https://devcenter.heroku.com/articles/heroku-cli-commands
+
+OK...works now....had to do several things as so:
+- first, had to delete the heroku app and recreate again since the dyno assignment in the resource tab was incorrect from previous installs.
+- cleaned up the .travis.yml to remove the zip_file....instead deploy the entire stack
+- you have to create the Heroku app prior to the Travis deployment in its current setup
+- fixed the Procfile syntax from recommendations in the above links
+- re-ran the build and deployed to the newly created app - the resources tab registred the dyno settings.
+- Ran the cli command - hereoku ps --app <app name> and could see the dyno assigned.
+- Opened the app - got the page not found and was then able to run this URI: https://springboot-gth-alpha.herokuapp.com/api/greetings/greeting?name=hs
+	- and it worked !!! Phew !!!!
+	
+Freeze this setup for now.
+
+	
 
